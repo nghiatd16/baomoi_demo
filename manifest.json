@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Báo Mới Recommendation",
+  "short_name": "Báo Mới News",
+  "description": "Tiện ích nâng cao hiển thị kết quả khuyến nghị.",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://baomoi.com/*"
+      ],
+      "js": [
+        "jquery.js",
+        "recommendation.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_icon": "baomoi-icon.png",
+    "default_popup": "options.html"
+  },
+  "permissions": [
+    "storage",
+    "https://baomoi.com/*"
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "jquery.js",
+      "back_bg.js"
+    ]
+  },
+  "icons": {
+    "128": "baomoi-icon.png"
+  },
+  "options_ui": {
+    "page": "options.html?type=chrome_style",
+    "chrome_style": true
+  }
+}

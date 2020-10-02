@@ -3,18 +3,31 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Options</title>
+        <title>Báo Mới Recommendation</title>
         <link rel="stylesheet" href="options.css" />
     </head>
     <body>
         <main>
             <div class="section">
-                <h3 data-i18n-key="security">Cấu hình</h3>
-                <div class="section-body">
-                    <input type="checkbox" id="popup_enable" name="popup_enable" value="1"><span>Hiện popup</span><br />
+                
+                <h3 id="userfield_header" data-i18n-key="security">Đăng Nhập</h3>
+                <div style="color: red; padding: 3px; margin-top: 3px;" id="status" hidden> Test Test</div>
+                <div id="user_login" hidden class="section-body">
+                    <input type="text" id="username" name="username" placeholder="Username" style="padding: 2px;"><span></span>
+                    <input type="password" id="password" name="password" placeholder="Password" style="padding: 2px;"><span></span>
+                    <button id="login" style="padding-top: 3px; margin-top: 3px;">Đăng Nhập</button>
+                </div>
+                <div id="user_info" hidden class="section-body">
+                    <h4>Username: <span id="disp_username">Trần Đại Nghĩa</span></h4>
+                    <button id="logout" style="padding-top: 3px; margin-top: 3px;">Đăng Xuất</button>
                 </div>
             </div>
-            <div id="status"></div>
+            <div class="section">
+                <h3 data-i18n-key="security">Cấu hình</h3>
+                <div class="section-body">
+                    <input type="checkbox" id="popup_enable" name="popup_enable" value="1"><span>Hiện Recommendation</span><br />
+                </div>
+            </div>
         </main>
         <footer><button id="save">Save</button></footer>
         <script src="options.js"></script>

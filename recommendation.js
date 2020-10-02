@@ -1,7 +1,7 @@
 /************
  * Recommendation Web SDK
  ************/
-recommend_url = 'https://recommend-29.logger.vsmarty.vn/rec/l2r';
+recommend_url = '#';
 alway_show = false;
 chrome.storage.sync.get({ popup_enable: false }, function (items) {
     alway_show = items.popup_enable;
